@@ -1,0 +1,47 @@
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5),
+                0 0 10px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.7),
+                0 0 20px rgba(59, 130, 246, 0.5),
+                0 0 30px rgba(59, 130, 246, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5),
+                0 0 10px rgba(59, 130, 246, 0.3);
+  }
+}
+
+.glowing-button {
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: glow 3s infinite;
+}
+
+.glowing-button:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  animation: none;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.7),
+              0 0 30px rgba(59, 130, 246, 0.4);
+}
+
+.glowing-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px white,
+              0 0 0 4px #3b82f6;
+  animation: none;
+}
+
+.glowing-button:active {
+  transform: translateY(1px);
+}
